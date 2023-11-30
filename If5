@@ -1,0 +1,26 @@
+package If;
+
+import java.util.Scanner;
+
+public class If5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Sonni kiriting: ");
+        int son = scanner.nextInt();
+
+        int plus = 0;
+        int minus = 0;
+
+        if (son > 0) {
+            plus++;
+        } else if (son < 0) {
+            minus++;
+        }
+
+        System.out.println("Musbat sonlar soni: " + plus);
+        System.out.println("Manfiy sonlar soni: " + minus);
+
+        scanner.close();
+    }
+}

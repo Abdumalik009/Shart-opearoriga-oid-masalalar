@@ -2,7 +2,7 @@ package If;
 
 import java.util.Scanner;
 
-public class KichikSon {
+public class If12 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Birinchi sonni kiriting: ");

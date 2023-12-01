@@ -1,0 +1,33 @@
+package If;
+
+import java.util.Scanner;
+
+public class KichikSon {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Birinchi sonni kiriting: ");
+        double son1 = scanner.nextDouble();
+        System.out.print("Ikkinchi sonni kiriting: ");
+        double son2 = scanner.nextDouble();
+        System.out.print("Uchinchi sonni kiriting: ");
+        double son3 = scanner.nextDouble();
+
+        double kichikSon = min(son1, son2, son3);
+
+        System.out.println("Uchta sonning kichigi: " + kichikSon);
+    }
+
+    public static double min(double a, double b, double c) {
+        double kichik = a;
+
+        if (b < kichik) {
+            kichik = b;
+        }
+
+        if (c < kichik) {
+            kichik = c;
+        }
+
+        return kichik;
+    }
+}

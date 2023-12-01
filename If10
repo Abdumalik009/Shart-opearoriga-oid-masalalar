@@ -1,0 +1,24 @@
+package If;
+
+import java.util.Scanner;
+
+public class If10 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("A sonini kiriting: ");
+        int A = scanner.nextInt();
+        System.out.print("B sonini kiriting: ");
+        int B = scanner.nextInt();
+
+        if (A != B) {
+            A = A + B;
+            B = A;
+        } else {
+            A = 0;
+            B = 0;
+        }
+
+        System.out.println("A yangi qiymati: " + A);
+        System.out.println("B yangi qiymati: " + B);
+    }
+}

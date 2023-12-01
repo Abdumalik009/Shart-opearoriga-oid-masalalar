@@ -1,0 +1,31 @@
+package If;
+
+import java.util.Scanner;
+
+public class If17 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("1-butun sonni kiriting: ");
+        int son1 = scanner.nextInt();
+
+        System.out.print("2-butun sonni kiriting: ");
+        int son2 = scanner.nextInt();
+
+        System.out.print("3-butun sonni kiriting: ");
+        int son3 = scanner.nextInt();
+
+
+        if (son1>son2 && son1 >son3 && son2>son3){
+            System.out.println("Sonlarning ikkilantirilgani ");
+            System.out.println("son1: "+(son1*2));
+            System.out.println("son2: "+(son2*2));
+            System.out.println("son3: "+(son3*2));
+        } else {
+            System.out.println("Sonlarning ishorasi uzgartirildi");
+            System.out.println("son1: "+(-son1));
+            System.out.println("son2: "+(-son2));
+            System.out.println("son3: "+(-son3));
+        }
+    }
+}

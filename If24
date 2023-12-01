@@ -1,0 +1,22 @@
+package If;
+
+import java.util.Scanner;
+
+public class If28 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Yilni kiriting: ");
+        int yil = scanner.nextInt();
+
+        int K;
+        if ((yil % 4 == 0 && yil % 100 != 0) || (yil % 400 == 0)) {
+            K = 366;
+        } else {
+            K = 365;
+        }
+
+        System.out.println(yil + " yilida " + K + " kun bor.");
+    }
+}
+

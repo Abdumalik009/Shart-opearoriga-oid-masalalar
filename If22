@@ -1,0 +1,29 @@
+package If;
+
+import java.util.Scanner;
+
+public class If23 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("1-uchi yuzasi: ");
+        double s1 = scanner.nextDouble();
+
+        System.out.print("2-uchi yuzasi: ");
+        double s2 = scanner.nextDouble();
+
+        System.out.print("3-uchi yuzasi: ");
+        double s3 = scanner.nextDouble();
+
+        if (s1 > 0 && s2 > 0 && s3 > 0) {
+            double p = (s1 + s2 + s3) / 2; 
+
+            double border = Math.sqrt((p - s1) * (p - s2) * (p - s3) / p);
+
+            System.out.println("Uchburchakning to'rtinchi uchi: " + border);
+        } else {
+            System.out.println("Notog'ri qiymatlar kiritildi. Uchburchak yuzasi musbat sonlar bo'lishi kerak.");
+        }
+    }
+}
+

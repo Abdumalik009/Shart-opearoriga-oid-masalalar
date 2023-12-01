@@ -1,0 +1,50 @@
+package If;
+
+import java.util.Scanner;
+
+public class If20 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("A nuqtasining x qiymatini kiriting: ");
+        double xA = scanner.nextDouble();
+        System.out.print("A nuqtasining y qiymatini kiriting: ");
+        double yA = scanner.nextDouble();
+
+        System.out.print("B nuqtasining x qiymatini kiriting: ");
+        double xB = scanner.nextDouble();
+        System.out.print("B nuqtasining y qiymatini kiriting: ");
+        double yB = scanner.nextDouble();
+
+        System.out.print("C nuqtasining x qiymatini kiriting: ");
+        double xC = scanner.nextDouble();
+        System.out.print("C nuqtasining y qiymatini kiriting: ");
+        double yC = scanner.nextDouble();
+
+        double masofaAB = masofa(xA, yA, xB, yB);
+        double masofaAC = masofa(xA, yA, xC, yC);
+        double masofaBC = masofa(xB, yB, xC, yC);
+
+        double engYaqinMasofa = Math.min(Math.min(masofaAB, masofaAC), masofaBC);
+        double yaqinNuqtaX = 0;
+        double yaqinNuqtaY = 0;
+
+        if (engYaqinMasofa == masofaAB) {
+            yaqinNuqtaX = (xA + xB) / 2;
+            yaqinNuqtaY = (yA + yB) / 2;
+        } else if (engYaqinMasofa == masofaAC) {
+            yaqinNuqtaX = (xA + xC) / 2;
+            yaqinNuqtaY = (yA + yC) / 2;
+        } else {
+            yaqinNuqtaX = (xB + xC) / 2;
+            yaqinNuqtaY = (yB + yC) / 2;
+        }
+
+        System.out.println("Eng yaqin nuqta: (" + yaqinNuqtaX + ", " + yaqinNuqtaY + ")");
+        System.out.println("Ular orasidagi masofa: " + engYaqinMasofa);
+    }
+
+    public static double masofa(double x1, double y1, double x2, double y2) {
+        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
+}

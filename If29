@@ -1,0 +1,23 @@
+package If;
+
+import java.util.Scanner;
+public class If29 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Butun son kiriting: ");
+        int number = scanner.nextInt();
+
+        if (number > 0 && number % 2 != 0) {
+            System.out.println("Musbat toq son");
+        } else if (number < 0 && number % 2 == 0) {
+            System.out.println("Manfiy juft son");
+        } else if (number == 0) {
+            System.out.println("Son nol");
+        } else {
+            System.out.println("Boshqa toifadagi son");
+        }
+
+
+    }
+}

@@ -1,0 +1,27 @@
+package If;
+
+import java.util.Scanner;
+public class If30 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("1 dan 999 gacha bo'lgan butun son kiriting: ");
+        int number = scanner.nextInt();
+
+        if (number >= 1 && number <= 999) {
+            if (number >= 10 && number <= 99 && number % 2 == 0) {
+                System.out.println("Ikki xonali juft son");
+            } else if (number >= 100 && number <= 999 && number % 2 != 0) {
+
+                System.out.println("Uch xonali toq son");
+            } else if (number >= 100 && number <= 999 && number % 2 == 0) {
+                System.out.println("Uch xonali juft son");
+            } else {
+                System.out.println("Notori son");
+
+            }
+
+
+        }
+    }
+}
